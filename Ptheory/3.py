@@ -1,22 +1,18 @@
-import math
-
-def permutations(n, k):
-    """Вычисляет количество размещений из n по k."""
-    return math.factorial(n) // math.factorial(n - k)
+from itertools import combinations
 
 def solve():
-    """Решает задачу и выводит ответ."""
     n_cultures = 14
-    n_petri_dishes = 5
+    n_plates = 5
 
-    # Выбираем 5 культур и распределяем их по 5 чашкам (размещения)
-    first_stage_ways = permutations(n_cultures, n_petri_dishes)
+    total_ways = 0
+    for i in range(n_plates + 1):
+        sign = (-1) ** i
+        ways_to_choose_empty_plates = combinations(range(n_plates), i)
+        ways_to_distribute_cultures = (n_plates - i) ** n_cultures
+        total_ways += sign * sum(1 for _ in ways_to_choose_empty_plates) * ways_to_distribute_cultures
 
-    # Распределяем оставшиеся 9 культур по 5 чашкам
-    remaining_cultures = n_cultures - n_petri_dishes
-    second_stage_ways = n_petri_dishes ** remaining_cultures
+    print(f"Количество способов: {int(total_ways)}")
 
-    total_ways = first_stage_ways * second_stage_ways
-    print(f"Количество способов распределить культуры: {total_ways}")
-
-solve()
+if __name__ == "__main__":
+    solve()
+    

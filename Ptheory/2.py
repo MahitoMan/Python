@@ -22,3 +22,4 @@ def count_valid_sequences():
 
 # Вызываем функцию и выводим результат
 print(count_valid_sequences())
+

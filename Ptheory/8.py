@@ -26,3 +26,4 @@ def solve():
     print(f"Вероятность объявления карантина: {probability_quarantine:.4f}")
 
 solve()
+

@@ -21,3 +21,4 @@ ways_to_choose_bacteria = (
 total_ways = num_tissues * ways_to_choose_bacteria
 
 print(total_ways)
+
