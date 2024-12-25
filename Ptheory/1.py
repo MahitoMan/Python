@@ -4,7 +4,7 @@ import math
 def first_part():
     result = 0
     for i in range(5, 16):
-        result += math.comb(40, i) * math.comb(55 - i, i)
+        result += math.comb(40, i) * math.comb(40 - i, i)
     return result
 
 # Функция для второй части выражения
