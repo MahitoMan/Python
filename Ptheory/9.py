@@ -25,7 +25,7 @@ def solve():
     probability_worker = p_worker_i * p_i + p_worker_c * p_c + p_worker_s * p_s
 
     # Вероятность, что за неделю не будет трутней
-    probability_no_drone_week = probability_worker**7 # Исправленная строка
+    probability_no_drone_week = probability_worker**7 
 
     print(f"Вероятность, что за неделю не встретится трутней: {probability_no_drone_week:.4f}")
 

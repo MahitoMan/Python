@@ -11,3 +11,4 @@ p_safe_single_period = (1 - p_meet) + p_meet * p_no_catch
 p_safe_day = p_safe_single_period ** 2
 
 print(f"Вероятность того, что стадо не потеряет никого за день: {p_safe_day:.6f}")
+
