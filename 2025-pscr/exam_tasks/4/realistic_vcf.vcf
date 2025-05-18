@@ -1,0 +1,13 @@
+##fileformat=VCFv4.2
+##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: Allele|Annotation|Impact|Gene_Name|Feature_Type|Feature_ID|Transcript_BioType|Rank|HGVS.c|HGVS.p|cDNA.pos/cDNA.length|CDS.pos/CDS.length|AA.pos/AA.length|Distance|ERRORS / WARNINGS / INFO">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr1	1000	.	A	C	50	PASS	ANN=C|missense_variant|MODERATE|Gene_Sig_2_Exp|transcript|Tx1|protein_coding|1/1|c.100A>C|p.Lys34Thr||| # Связан с целевым геном
+chr1	1100	.	T	G	99	PASS	ANN=G|synonymous_variant|LOW|Gene_Not_Sig|transcript|Tx2|protein_coding|1/1|c.110T>G|||| # Связан с нецелевым геном
+chr1	1200	.	C	A	80	PASS	ANN=A|frameshift_variant|HIGH|Gene_Sig_3_Exp|transcript|Tx3|protein_coding|1/1|c.120delC|p.Val40Serfs*||| # Связан с целевым геном
+chr1	1300	.	G	T	70	PASS	ANN=T|intron_variant|MODIFIER|Gene_Sig_Only_1_Exp|transcript|Tx4|non_coding|||||| # Связан с нецелевым геном (только 1 эксперимент)
+chr1	1400	.	A	G	60	PASS	ANN=G|missense_variant|MODERATE|Gene_With_NaN|transcript|Tx5|protein_coding|1/1|c.140A>G|p.Met47Val||| # Связан с целевым геном
+chr1	1500	.	C	T	55	PASS	ANN=T|upstream_gene_variant|MODIFIER|Another_Not_Sig|intergenic_region|||||||500| # Связан с нецелевым геном
+chr1	1600	.	G	C	50	PASS	ANN=C|missense_variant|MODERATE|Gene_Sig_4_Exp|transcript|Tx6|protein_coding|1/1|c.160G>C|p.Ala54Pro||| # Связан с целевым геном
+chr2	1000	.	A	T	50	PASS	ANN=T|missense_variant|MODERATE|Gene_Sig_2_Exp|transcript|Tx7|protein_coding|1/1|c.100A>T|p.Lys34Thr||| # Связан с целевым геном на другой хромосоме
+chr2	1100	.	C	G	99	PASS	ANN=G|synonymous_variant|LOW|Gene_Not_Sig|transcript|Tx8|protein_coding|1/1|c.110C>G|||| # Связан с нецелевым геном на другой хромосоме
+chr2	1200	.	G	A	80	PASS	ANN=A|frameshift_variant|HIGH|Gene_Sig_3_Exp.1|transcript|Tx9.1|protein_coding|1/1|c.120delG|p.Val40Serfs*||| # Связан с целевым геном (с суффиксом)
