@@ -1,0 +1,15 @@
+##fileformat=VCFv4.2
+##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: Allele|Annotation|Impact|Gene_Name|Feature_Type|Feature_ID|Transcript_BioType|Rank|HGVS.c|HGVS.p|cDNA.pos/cDNA.length|CDS.pos/CDS.length|AA.pos/AA.length|Distance|ERRORS / WARNINGS / INFO">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr1	10000	.	A	T	50	PASS	ANN=T|missense_variant|MODERATE|Gene_A_Sig_3|transcript|TxA1|protein_coding|1/1|c.100A>T|p.Lys34*|||
+chr1	10001	.	C	G	99	PASS	ANN=G|synonymous_variant|LOW|Gene_B_Not_Sig|transcript|TxB1|protein_coding|1/1|c.100C>G||||
+chr1	10002	.	G	A	80	.	ANN=A|frameshift_variant|HIGH|Gene_C_Sig_4|transcript|TxC1|protein_coding|1/1|c.100delG|p.Val34Serfs*|||
+chr1	10003	.	T	C	70	PASS	ANN=C|intron_variant|MODIFIER|Gene_D_Sig_2|transcript|TxD1|non_coding||||||
+chr1	10004	.	A	G	60	PASS	ANN=G|missense_variant|MODERATE|Gene_E_Not_Sig|transcript|TxE1|protein_coding|1/1|c.100A>G|p.Met34Val|||
+chr1	10005	.	C	T	55	PASS	ANN=T|upstream_gene_variant|MODIFIER|Gene_A_Sig_3|intergenic_region|||||||1000|
+chr1	10006	.	G	C	50	PASS	ANN=C|missense_variant|MODERATE|Gene_C_Sig_4|transcript|TxC2|protein_coding|1/1|c.100G>C|p.Ala34Pro|||
+chr1	10007	.	A	T	50	PASS	ANN=T|missense_variant|MODERATE|Gene_A_Sig_3.1|transcript|TxA1.1|protein_coding|1/1|c.100A>T|p.Lys34*|||
+chr1	10008	.	A	C	.	PASS	ANN=C|variant|MODIFIER|Gene_Random_100|feature||||||||
+chr2	20005	.	T	G	.	PASS	ANN=G|variant|MODIFIER|Gene_A_Sig_3|feature|||||||| 
+chr3	30010	.	C	A	.	PASS	ANN=A|variant|MODIFIER|Gene_Not_Sig|feature|||||||| 
+
