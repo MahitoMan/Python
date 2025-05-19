@@ -1,0 +1,18 @@
+##fileformat=VCFv4.2
+##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: Allele|Annotation|Impact|Gene_Name|Feature_Type|Feature_ID|Transcript_BioType|Rank|HGVS.c|HGVS.p|cDNA.pos/cDNA.length|CDS.pos/CDS.length|AA.pos/AA.length|Distance|ERRORS / WARNINGS / INFO">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr1	100	.	A	T	50	PASS	ANN=T|missense_variant|MODERATE|GeneA|transcript|TxA1|protein_coding|1/1|c.100A>T|p.Lys34*|||
+chr1	150	rs123	C	G	99	PASS	ANN=G|synonymous_variant|LOW|GeneX|transcript|TxX1|protein_coding|1/1|c.150C>G||||
+chr1	200	.	G	A	80	.	ANN=A|frameshift_variant|HIGH|GeneC|transcript|TxC1|protein_coding|1/1|c.200delG|p.Val67Serfs*|||
+chr1	250	.	T	C	70	PASS	ANN=C|intron_variant|MODIFIER|GeneY|transcript|TxY1|non_coding||||||
+chr1	300	.	A	G	60	PASS	ANN=G|missense_variant|MODERATE|GeneA|transcript|TxA2|protein_coding|1/1|c.300A>G|p.Met100Val|||,ANN=G|upstream_gene_variant|MODIFIER|GeneZ|intergenic_region|||||||100|
+chr1	350	.	C	T	40	PASS	# Это строка без поля INFO
+chr1	400	.	G	C	55	PASS	ANN=C|downstream_gene_variant|MODIFIER|GeneC|intergenic_region|||||||200| # GeneC, но не вариант с высокой значимостью
+chr1	450	.	A	T	50	PASS	ANN=T|missense_variant|MODERATE|GeneA.1|transcript|TxA1.1|protein_coding|1/1|c.100A>T|p.Lys34*||| # GeneA с суффиксом
+chr1	500	.	C	G	99	PASS	ANN=G|synonymous_variant|LOW|GeneX|transcript|TxX1|protein_coding|1/1|c.150C>G||||;OTHER_TAG=Value # Несколько тегов в INFO
+chr1	550	.	T	C	70	PASS	ANN=C|intron_variant|MODIFIER||transcript|TxY1|non_coding|||||| # Отсутствует имя гена в аннотации
+chr1	600	.	A	G	60	PASS	ANN=G|missense_variant|MODERATE|GeneC|transcript|TxC2|protein_coding|1/1|c.300A>G|p.Met100Val||| # GeneC
+chr2	100	.	A	T	50	PASS	ANN=T|missense_variant|MODERATE|GeneA|transcript|TxA3|protein_coding|1/1|c.100A>T|p.Lys34*||| # GeneA на другой хромосоме
+chr2	150	.	C	G	99	PASS	ANN=G|synonymous_variant|LOW|GeneB|transcript|TxB1|protein_coding|1/1|c.150C>G|||| # GeneB (если не целевой)
+# Некорректно отформатированная строка (слишком мало полей)
+chr3	100	.	A	T	50	PASS
